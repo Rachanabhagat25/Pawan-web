@@ -1,0 +1,577 @@
+@import url('https://fonts.googleapis.com/css2?family=Hind:wght@300;400;500;600;700&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap');
+.header {
+  display: flex;
+  justify-content: center; /* Centers content horizontally */
+  align-items: center;     /* Centers content vertically (optional) */
+  margin: 20px 0;          /* Adds vertical margin */
+}
+
+.logo {
+  width: 250px;    /* Adjust width as needed */
+  height: 70px;   /* Maintains aspect ratio */
+   border: 3px solid #333; /* Border width, style, and color */
+  border-radius: 8px;     /* Optional: rounded corners */
+  padding: 5px;           /* Optional: space between image and border */
+  background-color: #fff;
+}
+.filter {
+  margin: 20px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background-color: #f9f9f9;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.filter label {
+  font-size: 16px;
+  font-weight: bold;
+  color: #333;
+}
+
+.filter select {
+  padding: 8px 12px;
+  font-size: 16px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  background-color: #fff;
+  cursor: pointer;
+  transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+.filter select:focus {
+  border-color: #007bff;
+  box-shadow: 0 0 5px rgba(38, 143, 255, 0.5);
+  outline: none;
+}
+
+.filter option {
+  padding: 10px;
+}
+
+*{
+  font-family: "Roboto Condensed", sans-serif;
+  padding: 0;
+  margin:0 ;
+}
+
+body{
+  background-color: aliceblue;
+}
+.addUser{
+  width: 45%;
+  background-color: rgb(195, 177, 232);;
+  box-shadow: 1px 1px 8px rgba(0, 0, 0, 0.065);
+  border-radius: 5px;
+  margin: 50px auto;
+  padding: 50px;
+}
+.addUserForm {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: space-between;
+  margin: 20px;
+}
+.addUserForm .inputGroup{
+  width: 0 0 58%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.addCarForm .inputGroup{
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.addUserForm .inputGroup label{
+  margin-bottom: 5px;
+}
+.addUserForm .inputGroup input,
+.addUserForm .inputGroup select {
+    margin-bottom: 10px;
+    padding: 10px;
+    outline: none;
+}
+.addUserForm {
+  margin: 20px;
+}
+.addUserForm .inputGroup button{
+  border: 0;
+  outline: none;
+  background-color: blueviolet;
+  color: white;
+  font-weight: 600;
+  padding: 15px;
+  cursor: pointer;
+  border-radius: 5px;
+  box-shadow: 1px 1px 8px rgba(0, 0, 0, 0.065);
+  margin-top: 20px;
+}
+.addUser h3{
+  margin-top: 10px;
+}
+.userTable{
+  width: 90%;
+  background-color: rgb(195, 177, 232);
+  box-shadow: 1px 1px 8px rgba(9, 9, 9, 0.065);
+  border-radius: 5px;
+  margin: 5px auto 50px auto; 
+  padding: 20px;
+}
+.driverdata{
+  width: 70%;
+  background-color: rgb(195, 177, 232);
+  box-shadow: 1px 1px 8px rgba(9, 9, 9, 0.065);
+  border-radius: 5px;
+  margin: 5px auto 50px auto; 
+  padding: 20px;
+}
+.driverdata table thead th{
+  background-color: rgb(64, 94, 158);
+  color: rgb(247, 243, 243);
+  padding: 10px;
+}
+.carTable{
+  width: 60%;
+  background-color: rgb(195, 177, 232);
+  box-shadow: 1px 1px 8px rgba(9, 9, 9, 0.065);
+  border-radius: 5px;
+  margin: 5px auto 50px auto; 
+  padding: 20px;
+}
+.carTable table thead th{
+  background-color: rgb(64, 94, 158);
+  color: rgb(247, 243, 243);
+  padding: 10px;
+}
+.addButton{
+  text-decoration: none;
+  background-color: purple;
+  color: rgb(255, 255, 255);
+  font-weight: 500;
+  box-shadow: 1px 1px 8px rgba(0, 0, 0, 0.065);
+  border-radius: 5px;
+  padding: 10px;
+
+}
+.userTable table{
+  width: 100%;
+  margin-top: 10px;
+  border-collapse: collapse;
+}
+.userTable table thead th{
+  background-color: rgb(64, 94, 158);
+  color: rgb(247, 243, 243);
+  padding: 10px;
+}
+.userTable table tbody td{
+  padding: 10px;
+  text-align: center;
+}
+.actionButtons button{
+  border: 0;
+  outline: none;
+  background: red;
+  padding: 8px 10px;
+  color: white;
+  border-radius: 5px;
+  cursor: pointer;
+}
+.actionButtons a{
+  background: green;
+  padding: 6px 10px;
+  color: white;
+  border-radius: 5px;
+  margin: 0 10px ;
+  text-decoration: none;
+}
+/* styles.css */
+.navBar {
+  background-color:  rgb(64, 94, 158);;
+  overflow: hidden;
+}
+
+.navBar ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+.navBar li {
+  float: left;
+}
+
+.navBar li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 5px 16px;
+  text-decoration: none;
+}
+
+.navBar li a:hover {
+  background-color: #111;
+}
+
+.header div {
+  font-size: 3rem;          /* Makes the text large */
+  font-weight: bold;        /* Makes the text bold */
+  color: #1b3346;           /* Dark blue color for the heading */
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2); /* Adds a subtle shadow */
+  text-decoration: underline; /* Adds an underline */
+  text-decoration-color: #030d18; /* Color of the underline */
+  text-decoration-thickness: 5px; /* Thickness of the underline */
+  animation: fadeInOut 15s infinite; /* Applies the fade in and out animation */
+}
+
+.header div {
+  font-size: 3rem;          /* Makes the text large */
+  font-weight: bold;        /* Makes the text bold */
+  color: #1b3346;           /* Blue color for the heading */
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2); /* Adds a subtle shadow */
+  animation: fadeInOut 20s infinite; /* Applies the fade in and out animation */
+}
+
+/* Keyframes for fade in and out animation */
+@keyframes fadeInOut {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+.inputGroup {
+  margin: 5px; /* Adjust as needed */
+}
+
+.addUserForm table td {
+  padding: 10px; /* Adds padding between cells */
+}
+
+.tableContainer {
+  max-height: 400px; /* Set your desired height */
+  overflow-y: auto;
+  margin-top: 10px;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+thead {
+  position: sticky;
+  top: 0;
+  background-color: #f2f2f2; /* Header background color */
+  z-index: 1;
+}
+
+thead th {
+  padding: 10px;
+  text-align: left;
+  border-bottom: 1px solid #ddd;
+}
+
+tbody td {
+  padding: 10px;
+  text-align: left;
+  border-bottom: 1px solid #ddd;
+  
+}
+
+tbody tr:nth-child(even) {
+  background-color: #f9f9f9;
+  font-family: 'Courier New', monospace;
+}
+
+tbody tr:hover {
+  background-color: #f1f1f1;
+}
+/* Fixed Navigation Bar */
+.navBar {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background-color:  rgb(64, 94, 158); /* Background color of the navbar */
+  z-index: 1000; /* Ensures the navbar is on top of other elements */
+  padding: 10px 0;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.navBar ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+}
+
+.navBar li {
+  margin: 0 15px;
+}
+
+.navBar a {
+  color: white;
+  text-decoration: none;
+  font-size: 20px;
+}
+
+.navBar a:hover {
+  text-decoration: underline;
+}
+
+/* Add padding to the top of the content below the navbar */
+body {
+  padding-top: 60px; /* Adjust this value based on the height of the navbar */
+  font-family: 'Courier New', monospace;
+}
+
+/* Ensure other content scrolls while the navbar stays fixed */
+.content {
+  margin-top: 60px; /* Same as the padding-top on the body */
+  padding: 20px;
+}
+.loading-bar-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 4px;
+  background-color: transparent;
+  z-index: 9999;
+}
+
+.loading-bar {
+  height: 100%;
+  background-color: #08b2f0;
+  width: 0;
+  transition: width 0.3s ease-out;
+}
+
+.loading-bar.active {
+  width: 100%;
+  transition: width 2s linear;
+}
+
+.loading-bar.complete {
+  width: 100%;
+  transition: none;
+  opacity: 0;
+  transition: opacity 0.5s ease-out;
+}.tableContainer {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px; /* Adjust as needed */
+}
+
+.totaltable {
+  border-collapse: collapse;
+  width: 80%; /* Adjust width as needed */
+  margin: auto; /* Center the table */
+}
+
+.totaltable thead th {
+  background-color: rgb(3, 80, 3);
+  color: rgb(12, 7, 7);
+ 
+}
+
+.totaltable tbody {
+  background-color: #ffffff; /* Light green for the body */
+  font-family: 'Courier New', monospace;
+}
+
+.totaltable td {
+  text-align: center; /* Center the table data */
+  font-weight: bold; /* Bold text for table data */
+  padding: 10px; /* Adjust padding for larger cells */
+}
+.buttongroup {
+  text-align: center; /* Center the button group */
+  margin-bottom: 20px; /* Bottom margin */
+}
+
+.addButton, .cancel {
+  background-color: purple; /* Button color */
+  color: white; /* Text color */
+  padding: 10px 20px; /* Button padding */
+  border: none; /* No border */
+  border-radius: 5px; /* Rounded corners */
+  cursor: pointer; /* Pointer cursor on hover */
+  margin: 0 10px; /* Space between buttons */
+  font-size: 16px; /* Font size */
+  transition: background-color 0.3s; /* Smooth background change */
+}
+
+.addButton:hover, .cancel:hover {
+  background-color: rgb(37, 2, 52); /* Darker purple on hover */
+}
+.actionButtons {
+  display: flex;
+  gap: 15px; /* Adjust space between buttons */
+  margin-bottom: 5px; /* Optional spacing below the buttons */
+}
+
+.actionButtons button {
+  text-decoration: none;
+  background-color: purple;
+  color: rgb(255, 255, 255);
+  font-weight: 500;
+  box-shadow: 1px 1px 8px rgba(0, 0, 0, 0.065);
+  border-radius: 5px;
+  padding: 10px;
+  font-size: medium;
+}
+
+/* Increase checkbox size */
+input[type="checkbox"] {
+  width: 20px;  /* Adjust width */
+  height: 20px; /* Adjust height */
+  cursor: pointer; /* Change cursor to pointer */
+}
+
+/* Change checkbox color when checked */
+input[type="checkbox"]:checked {
+  accent-color: rgb(80, 10, 114); /* Modern browsers */
+}
+
+/* For older browsers that do not support accent-color */
+input[type="checkbox"]:checked {
+  background-color: rgb(80, 10, 114); /* This is for Firefox */
+}
+
+/* add user css  */
+
+.user1{
+  width: 30%;
+  background-color: rgb(195, 177, 232);
+  box-shadow: 1px 1px 8px rgba(0, 0, 0, 0.065);
+  border-radius: 5px;
+  margin: 50px auto;
+  padding: 50px;
+}
+.UserForm1 .inputGroup{
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.UserForm1 .inputGroup label{
+  margin-bottom: 5px;
+}
+.UserForm1 .inputGroup input{
+  margin-bottom: 10px;
+  padding: 10px;
+  outline: none;
+}
+.UserForm1 {
+  margin: 20px;
+}
+.UserForm1 .inputGroup button{
+  border: 0;
+  outline: none;
+  background-color: blueviolet;
+  color: white;
+  font-weight: 600;
+  padding: 15px;
+  cursor: pointer;
+  border-radius: 5px;
+  box-shadow: 1px 1px 8px rgba(0, 0, 0, 0.065);
+  margin-top: 20px;
+}
+.UserForm1 select {
+  padding: 8px 12px;
+  font-size: 16px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  background-color: #fff;
+  cursor: pointer;
+  transition: border-color 0.3s, box-shadow 0.3s;
+}
+.User1 h3{
+  margin-top: 10px;
+}
+body {
+  font-family: 'Courier New', monospace;
+}
+
+/* Spinner.css */
+.spinner {
+  border: 8px solid rgba(0, 0, 0, 0.1);
+  border-radius: 50%;
+  border-top: 8px solid #3498db; /* Blue color for the top */
+  width: 60px;
+  height: 60px;
+  animation: spin 1s linear infinite;
+  margin: auto;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+.spinner-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+}
+.inputs-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.inputs-container label {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin-bottom: 15px;
+  font-weight: bold;
+}
+
+.inputs-container input {
+  margin-top: 5px;
+  padding: 8px;
+  width: 250px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.inputs-container button {
+  background-color: grey;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  font-size: 16px;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 20px;
+}
+
+.inputs-container button:hover {
+  background-color: darkgrey;
+}
+
+.inputs-container h2, .inputs-container h3 {
+  text-align: center;
+}
+
+
+
