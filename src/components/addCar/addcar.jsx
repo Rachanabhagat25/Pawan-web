@@ -25,7 +25,7 @@ const AddCar = () => {
         e.preventDefault();
         setLoading(true);
         try {
-            const response = await axios.post("http://localhost:8000/api/car/create", car);
+            const response = await axios.post("https://pawan-data-base.onrender.com/api/car/create", car);
             toast.success(response.data.message, { position: "top-right" });
             navigate("/cars");
         } catch (error) {

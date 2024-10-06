@@ -15,7 +15,7 @@ const Car = () => {
         const fetchData = async () => {
             setLoading(true); // Show spinner while fetching
             try {
-                const response = await axios.get("http://localhost:8000/api/car/getAllCars");
+                const response = await axios.get("https://pawan-data-base.onrender.com/api/car/getAllCars");
                 setCars(response.data);
             } catch (error) {
                 console.error("Error fetching car data:", error);
@@ -51,7 +51,7 @@ const Car = () => {
             setLoading(true); // Start spinner when delete operation begins
             try {
                 const deleteRequests = Array.from(selectedCars).map(carId =>
-                    axios.delete(`http://localhost:8000/api/car/delete/${carId}`)
+                    axios.delete(`https://pawan-data-base.onrender.com/api/car/delete/${carId}`)
                 );
                 await Promise.all(deleteRequests);
                 toast.success("Selected Cars deleted successfully!", { position: "top-right" });

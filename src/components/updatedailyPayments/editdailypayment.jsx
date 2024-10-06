@@ -58,7 +58,7 @@ const EditDailyPayment = () => {
     const updateForm = async (e) => {
         e.preventDefault();
         setLoading(true);
-        await axios.put(`http://localhost:8000/api/dailyPayments/update/${id}`, payment)
+        await axios.put(`https://pawan-data-base.onrender.com/api/dailyPayments/update/${id}`, payment)
             .then((response) => {
                 toast.success(response.data.message, { position: "top-right" });
                 navigate("/dailypayments");
@@ -71,7 +71,7 @@ const EditDailyPayment = () => {
         const fetchPaymentData = async () => {
             setLoading(true);
             try {
-                const response = await axios.get(`http://localhost:8000/api/dailyPayments/fetchById/${id}`);
+                const response = await axios.get(`https://pawan-data-base.onrender.com/api/dailyPayments/fetchById/${id}`);
                 const fetchedPayment = response.data;
                 const formattedDate = new Date(fetchedPayment.date).toISOString().split('T')[0]; // Convert to YYYY-MM-DD format
                 setPayment({ ...fetchedPayment, date: formattedDate });
@@ -86,7 +86,7 @@ const EditDailyPayment = () => {
         const fetchUsers = async () => {
             setLoading(true);
             try {
-                const response = await axios.get("http://localhost:8000/api/user/getAllUser");
+                const response = await axios.get("https://pawan-data-base.onrender.com/api/user/getAllUser");
                 setUsers(response.data);
             } catch (error) {
                 console.error("Error fetching users:", error);
@@ -99,7 +99,7 @@ const EditDailyPayment = () => {
         const fetchCars = async () => {
             setLoading(true);
             try {
-                const response = await axios.get("http://localhost:8000/api/car/getAllCars");
+                const response = await axios.get("https://pawan-data-base.onrender.com/api/car/getAllCars");
                 setCars(response.data);
             } catch (error) {
                 console.error("Error fetching cars:", error);

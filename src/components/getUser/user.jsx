@@ -15,7 +15,7 @@ const User = () => {
         const fetchData = async () => {
             setLoading(true); // Show spinner
             try {
-                const response = await axios.get("http://localhost:8000/api/user/getAllUser");
+                const response = await axios.get("https://pawan-data-base.onrender.com/api/user/getAllUser");
                 setUsers(response.data);
             } catch (error) {
                 console.error("Error fetching user data:", error);
@@ -45,7 +45,7 @@ const User = () => {
             setLoading(true);
             try {
                 const deleteRequests = Array.from(selectedUsers).map(userId =>
-                    axios.delete(`http://localhost:8000/api/user/delete/${userId}`)
+                    axios.delete(`https://pawan-data-base.onrender.com/api/user/delete/${userId}`)
                 );
                 await Promise.all(deleteRequests);
                 toast.success("Selected users deleted successfully!", { position: "top-right" });

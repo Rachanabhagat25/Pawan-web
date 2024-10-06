@@ -18,7 +18,7 @@ const FilterDailyPayment = () => {
         const fetchData = async () => {
             setLoading(true); // Show spinner while fetching
             try {
-                const response = await axios.get("http://localhost:8000/api/dailyPayments/getAllPayments");
+                const response = await axios.get("https://pawan-data-base.onrender.com/api/dailyPayments/getAllPayments");
                 const sortedPayments = response.data.sort((a, b) => new Date(b.date) - new Date(a.date));
                 setPayments(sortedPayments);
                 setFilteredPayments(response.data);

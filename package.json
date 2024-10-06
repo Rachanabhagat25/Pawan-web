@@ -2,7 +2,7 @@
   "name": "crud-operation",
   "version": "0.1.0",
   "private": true,
-  "homepage": "http://Rachanabhagat25.github.io/kiaacabs",
+  "homepage": "http://Rachanabhagat25.github.io/",
   "dependencies": {
     "@inovua/reactdatagrid-community": "^5.10.2",
     "@syncfusion/ej2-base": "^26.2.10",

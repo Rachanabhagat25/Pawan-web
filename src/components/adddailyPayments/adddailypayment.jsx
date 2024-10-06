@@ -110,7 +110,7 @@ const AddDailyPayment = () => {
         setLoading(true);
         try {
             console.log("Data to be saved:", formData);
-            const response = await axios.post("http://localhost:8000/api/dailyPayments/create", formData);
+            const response = await axios.post("https://pawan-data-base.onrender.com/api/dailyPayments/create", formData);
 
             console.log("Response received:", response);
 
@@ -134,7 +134,7 @@ const AddDailyPayment = () => {
         const fetchUsers = async () => {
             setLoading(true);
             try {
-                const response = await axios.get("http://localhost:8000/api/user/getAllUser");
+                const response = await axios.get("https://pawan-data-base.onrender.com/api/user/getAllUser");
                 setUsers(response.data);
             } catch (error) {
                 console.error("Error fetching users:", error);
@@ -146,7 +146,7 @@ const AddDailyPayment = () => {
         const fetchCars = async () => {
             setLoading(true);
             try {
-                const response = await axios.get("http://localhost:8000/api/car/getAllCars");
+                const response = await axios.get("https://pawan-data-base.onrender.com/api/car/getAllCars");
                 setCars(response.data);
             } catch (error) {
                 console.error("Error fetching cars:", error);
@@ -156,7 +156,7 @@ const AddDailyPayment = () => {
         };
         const fetchExistingPayments = async () => {
             try {
-                const response = await axios.get("http://localhost:8000/api/dailyPayments/getAllPayments");
+                const response = await axios.get("https://pawan-data-base.onrender.com/api/dailyPayments/getAllPayments");
                 const payments = response.data;
 
                 const paymentDetails = payments.map(payment => ({

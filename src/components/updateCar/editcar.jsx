@@ -24,7 +24,7 @@ const EditCar = () => {
         e.preventDefault();
         setLoading(true); // Start loading when updating the car
         try {
-            const response = await axios.put(`http://localhost:8000/api/car/update/${id}`, car);
+            const response = await axios.put(`https://pawan-data-base.onrender.com/api/car/update/${id}`, car);
             toast.success(response.data.message, { position: "top-right" });
             navigate("/cars");
         } catch (error) {
@@ -37,7 +37,7 @@ const EditCar = () => {
     useEffect(() => {
         const fetchCarData = async () => {
             try {
-                const response = await axios.get(`http://localhost:8000/api/car/fetchById/${id}`);
+                const response = await axios.get(`https://pawan-data-base.onrender.com/api/car/fetchById/${id}`);
                 setCar(response.data);
             } catch (error) {
                 console.error("Error fetching car data:", error);

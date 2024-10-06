@@ -24,7 +24,7 @@ const Add = () => {
     const submitForm = async (e) => {
         e.preventDefault();
         setLoading(true);
-        await axios.post("http://localhost:8000/api/user/create", user).then((Response) => {
+        await axios.post("https://pawan-data-base.onrender.com/api/user/create", user).then((Response) => {
             toast.success(Response.data.message, { position: "top-right" });
             navigate("/");
             //alert("User Created successful..");

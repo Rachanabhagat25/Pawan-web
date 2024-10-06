@@ -24,7 +24,7 @@ const DailyPayments = () => {
             setLoading(true);
 
             try {
-                const response = await axios.get("http://localhost:8000/api/dailyPayments/getAllPayments");
+                const response = await axios.get("https://pawan-data-base.onrender.com/api/dailyPayments/getAllPayments");
                 const sortedPayments = response.data.sort((a, b) => new Date(b.date) - new Date(a.date));
                 setPayments(sortedPayments);
                 setFilteredPayments(sortedPayments);
@@ -146,7 +146,7 @@ const DailyPayments = () => {
                 setLoading(true);
                 try {
                     const deleteRequests = Array.from(selectedPayments).map(carId =>
-                        axios.delete(`http://localhost:8000/api/dailyPayments/delete/${carId}`)
+                        axios.delete(`https://pawan-data-base.onrender.com/api/dailyPayments/delete/${carId}`)
                     );
                     await Promise.all(deleteRequests);
                     toast.success("Selected payments deleted successfully!", { position: "top-right" });

@@ -23,7 +23,7 @@ const Edit = () => {
     }
     const updateForm =async(e)=>{
         e.preventDefault();
-        await axios.put(`http://localhost:8000/api/user/update/${id}`,user).then((Response)=>{
+        await axios.put(`https://pawan-data-base.onrender.com/api/user/update/${id}`,user).then((Response)=>{
             toast.success(Response.data.message,{position:"top-right"});            
             navigate("/");
             //alert("User Updated successful..");
@@ -31,7 +31,7 @@ const Edit = () => {
     }
 
     useEffect(()=>{
-        axios.get(`http://localhost:8000/api/user/fetchById/${id}`).then((response)=>{
+        axios.get(`https://pawan-data-base.onrender.com/api/user/fetchById/${id}`).then((response)=>{
             setUser(response.data);
         }).catch((error)=>{console.log(error);})
     },[id])
